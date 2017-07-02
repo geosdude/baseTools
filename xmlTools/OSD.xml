@@ -1,0 +1,671 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="DGIS - HAZ_TEST" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05A3DCA1301F8F002B02266EB1CA77E5853EFD133B09EBAF58</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - HAZ_TEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>haz_test</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - GEOHAZ" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05AC788A2785C1F8432F365F4ECF77C4AD</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - GEOHAZ</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>geohaz</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="PGIS - GISTEAM" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>gisteam</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>pgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb055</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb055:1521/pgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>057581D123191277A15DB2E12B4F3AAEF7</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - GIS_MAINT" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05D08B532B22760B98A0111388BE9657B7553623C488E6A4F6</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - GIS_MAINT</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>gis_maint</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="TGIS - ROCKMS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>Basic</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>ROCKMS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb218</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb218:1521/tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>05BB0629EC8F83AE9046FE7B6E32A2798D</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - MATT" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>0508EA77FA9F93FEB51EF2C162A3BF6C9C</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - MATT</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>matt</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - GISTEAM" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05A57C69929456DE78A5AAAF54CC2BB85D</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - GISTEAM</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>gisteam</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="PGIS - WORKGRP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>workgrp</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>pgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb055</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb055:1521/pgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>0505C1B8388065A017E03B217C144DB79F</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - WORKGRP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>workgrp</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - WORKGRP</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - ROCKMS" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05EAD1144B09FE0E26C9AABE4F6172AD9E</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - ROCKMS</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rockms</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="TGIS - WORKGRP" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>workgrp</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb218</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb218:1521/tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="password">
+            <Contents>05D5FE99ADFD472E072CABC96A69BF2209</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="DGIS - RICK" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>052CC49597E7ED0887AA4BCBFB07A8C11C</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>DGIS - RICK</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb320</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb320:1521/dgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>rick</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="TGIS - GISTEAM" className="oracle.jdeveloper.db.adapter.DatabaseProvider" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="password">
+            <Contents>05D69A40B94DEE74B085BA99D0D377E9477C09750F3E698B3A</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="RaptorConnectionType">
+            <Contents>Oracle</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OracleConnectionType">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="ConnName">
+            <Contents>TGIS - GISTEAM</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>oracle.jdbc.OracleDriver</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="OS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>jj00wb201</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="SavePassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="customUrl">
+            <Contents>jdbc:oracle:thin:@jj00wb201:1521/tgis.nash.tenn</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="NoPasswordConnection">
+            <Contents>TRUE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="KERBEROS_AUTHENTICATION">
+            <Contents>false</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>gisteam</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>
