@@ -142,7 +142,8 @@ def saveState(pFile):
   Done with pickOpt"""
   filename = os.path.split(pFile)[1]
   prefix = filename[:-2]
-  # This works as long as the dictionary is in this namespace.
+  # This works as long as the dictionary is in expected namespace else a NameError occurs.
+  # I added this try loop to catch the error.
   try:
     inDct = eval(prefix + 'Dct')
     fileobject = open(pFile, 'w')
