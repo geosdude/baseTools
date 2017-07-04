@@ -124,7 +124,9 @@ def loadDbase(filename, passIn="unknown"):
     #raw_input('Hit <Enter> to continue: ')
 
 def saveDbase(filename, object):
-  print """obsolete -- use saveState instead.\n"""
+  """saveDbase takes a pickle file name and a dictionary object as args.
+  Usage - saveDbase(filename, object)"""
+  #print """obsolete -- use saveState instead.\n"""
   file = open(filename, 'w')
   # convert dictionary to pickled string and
   # write to file.
@@ -140,13 +142,18 @@ def saveState(pFile):
   Done with pickOpt"""
   filename = os.path.split(pFile)[1]
   prefix = filename[:-2]
-  inDct = eval(prefix + 'Dct')
-  fileobject = open(pFile, 'w')
-  # convert dictionary to pickled string and
-  # write to file.
-  fileobject.write(pickOpt(pickle.dumps(inDct)))
-  fileobject.close()
-  inDct = None
+  # This works as long as the dictionary is in this namespace.
+  try:
+    inDct = eval(prefix + 'Dct')
+    fileobject = open(pFile, 'w')
+    # convert dictionary to pickled string and
+    # write to file.
+    fileobject.write(pickOpt(pickle.dumps(inDct)))
+    fileobject.close()
+    inDct = None
+  except NameError:
+    print "inDct " + prefix + 'Dct' + " error.  Dictionary write failure! Use saveDbase instead."
+
 
 def pickleJar(filename, passIn="unknown"):
   #print '\nIn pickleJar.\nfilename',filename,'\npassed in from',passIn
