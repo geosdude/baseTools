@@ -41,7 +41,7 @@ class ThreadedClient:
   #  keyword Dict    = methDct[methodName][4]
   #"""
 
-    def __init__(self, root=None):
+    def __init__(self, root=None, *args, **kwargs):
       """  """
       #! If these lines are present at the top of a function, metadata
       #  on the function gets populated in the method dictionary.
