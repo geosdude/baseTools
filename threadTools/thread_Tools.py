@@ -81,7 +81,7 @@ class ThreadedClient:
 
     def runThread(self, fnStr=''):
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
+      isEchoKey(methodName)
       echo    = echoDct[methodName][0]
       verbose = echoDct[methodName][1]
       message = echoDct[methodName][2]
@@ -102,7 +102,7 @@ class ThreadedClient:
       Check every 100 ms if there is something new in the queue.
       """
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
+      isEchoKey(methodName)
       echo    = echoDct[methodName][0]
       verbose = echoDct[methodName][1]
       message = echoDct[methodName][2]
@@ -142,7 +142,7 @@ class ThreadedClient:
       control.
       """
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
+      isEchoKey(methodName)
       echo    = echoDct[methodName][0]
       verbose = echoDct[methodName][1]
       message = echoDct[methodName][2]
@@ -165,7 +165,7 @@ class ThreadedClient:
     #? move this to the Threaded client. Drop the Code_Tools class and merge with ThreadedClient
     def execPyFile(self):
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
+      isEchoKey(methodName)
       echo    = echoDct[methodName][0]
       verbose = echoDct[methodName][1]
       message = echoDct[methodName][2]
@@ -180,10 +180,10 @@ class ThreadedClient:
       except NameError:
         print "can not find askFileName method."
         command = os.path.normpath(askopenfilename(title='Select a file.', filetypes='py'))
-      self.write(command)
+      print command
       command = """
 def virtualFunction(self): """ + "\n  " + command + "\n" + "  self.running = 0"
-      #self.write(command)
+      #print command
       self.runThread(command)
 
 # Experimental code.
@@ -229,26 +229,50 @@ def virtualFunction(self): """ + "\n  " + command + "\n" + "  self.running = 0"
 #        error = "command failed: \n" + fnStr + '\n\n'
 #        print error
 #        import traceback
-#        self.write(traceback.format_exc())
+#        print traceback.format_exc()
 #
 
 #! The above code needs to me implemented to deprecate the below.
-    def exeVirtualMethod(self, fnLst=[], bypass=0):
+    #def exeVirtualMethod(self, **kwargs):
+    def exeVirtualMethod(self, fnLst=[], bypass=0, **kwargs):
+      """Execute a function passed in as a list of strings representing lines of code."""
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
-      echo    = echoDct[methodName][0]
-      verbose = echoDct[methodName][1]
-      message = echoDct[methodName][2]
-      tmpStr  = self.processPyCode(fnLst, bypass)
+      try:
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      except StandardError:
+        isEchoKey(methodName)
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      if kwargs:
+        kw.update(kwargs)
+        methDct[methodName][4] = kw
       if echo:
-        M(Sk(), offset=8)
+        M(Sk(), verbose=1, offset=20)
+      if kw.has_key('preCmdLst'):
+        for command in kw['preCmdLst']:
+          exec(command)
+
+      #print ('farg ' + str(farg) + ' ' + str(type(farg))) + '\n' + \
+      #('*args ' + str(args) + ' ' + str(type(args))) + '\n' + \
+      #('**kwargs ' + str(kwargs) + ' ' + str(type(kwargs))).strip()      #this strips off self. and () from the function string.
+
+      tmpStr  = self.processPyCode(fnLst, bypass)
       if verbose:
-        self.write(tmpStr)
+        print tmpStr
       fnStr = tmpStr + \
 """
-  self.blankLine()
+  BL()
 """
-
+#"""
+#  self.blankLine()
+#"""
       try:
         if echo:
           print 'Executing this virtual  function: '
@@ -262,9 +286,9 @@ def virtualFunction(self): """ + "\n  " + command + "\n" + "  self.running = 0"
         error = "command failed: \n" + fnStr + '\n\n'
         print error
         import traceback
-        self.write(traceback.format_exc())
+        print traceback.format_exc()
 
-    def processPyCode(self, x, bypass):
+    def processPyCode(self, x, bypass, **kwargs):
       """
       Args: list of code strings, mode
       mode 0 inserts def virtualFunction(self): with cr and bumps remaining code strings over 2 spaces.
@@ -272,12 +296,27 @@ def virtualFunction(self): """ + "\n  " + command + "\n" + "  self.running = 0"
       mode 2 strips off newlines from the code strings and attempts to execute it.
       """
       methodName = Mn(Sk())
-      self.isEchoKey(methodName)
-      echo    = echoDct[methodName][0]
-      verbose = echoDct[methodName][1]
-      message = echoDct[methodName][2]
+      try:
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      except StandardError:
+        isEchoKey(methodName)
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      if kwargs:
+        kw.update(kwargs)
+        methDct[methodName][4] = kw
       if echo:
-        M(Sk(), offset=8)
+        M(Sk(), verbose=1, offset=25)
+      if kw.has_key('preCmdLst'):
+        for command in kw['preCmdLst']:
+          exec(command)
 
       fnStr = ""
       fnLst = []

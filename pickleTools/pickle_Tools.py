@@ -154,6 +154,7 @@ def saveState(pFile):
     inDct = None
   except NameError:
     print "inDct " + prefix + 'Dct' + " error.  Dictionary write failure! Use saveDbase instead."
+    print M(Sk())
 
 
 def pickleJar(filename, passIn="unknown"):

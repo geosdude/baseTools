@@ -95,13 +95,15 @@ for command in impLst:
 __builtins__['basePath']   = basePath = os.path.split(__file__)[0]
 __builtins__['confPath']   = confPath = os.path.join(basePath, 'conf')
 
-methPF   =  os.path.join(confPath, 'methPF')
+methPF   = os.path.join(confPath, 'methPF')
 envPF    = os.path.join(confPath, 'envPF')
-stPF = os.path.join(confPath, 'stPF')
-ioPF = os.path.join(confPath, 'ioPF')
+echoPF   = os.path.join(confPath, 'echoPF')
+stPF     = os.path.join(confPath, 'stPF')
+ioPF     = os.path.join(confPath, 'ioPF')
 envbakPF = os.path.join(confPath, 'envbakPF')
 
 __builtins__['methPF']   = methPF
+__builtins__['echoPF']   = echoPF
 __builtins__['envPF']    = envPF
 __builtins__['stPF']     = stPF
 __builtins__['ioPF']     = ioPF
@@ -122,6 +124,8 @@ sys.path.append(basePath)
 #mixIn(echo_Tools, saveState) This only works on classes.
 #print echo_Tools.checkEchoKey
 
+
+# Test the environment page file by reading the first line.
 try:
   with open(envPF , 'rU') as f:
     line1 = f.readline()
@@ -146,6 +150,8 @@ envDct['listPath'] = os.path.join(basePath, 'lst')
 envDct['logPath']  = os.path.join(confPath, 'log')
 envDct['stdErrF']  = os.path.join(os.path.join(confPath, 'log'), 'error.log')
 
+# Once we write back to the pickle file, delete the objects out of memory.
+
 # stDct - application state dictionary
 try:
   with open(stPF, 'rU') as f:
@@ -168,7 +174,24 @@ __builtins__['test']    = stDct['test']
 
 saveState(stPF)
 
-# Once we write back to the pickle file, delete the objects out of memory.
+
+# echoDct
+print 'echoPF', echoPF
+try:
+  with open(echoPF , 'rU') as f:
+    line1 = f.readline()
+except IOError:
+  with open(echoPF , 'w+') as f:
+    line1 = f.readline()
+  f.close()
+
+if len(line1) == 0:
+  echoDct = {}
+else:
+  echoDct = pickleJar(echoPF)
+
+__builtins__['echoDct'] = echoDct
+saveState(echoPF)
 
 # methDct
 #print 'methPF', methPF
@@ -1847,7 +1870,7 @@ Ln = x.lineNBR2                  # This return a modules line number as an integ
 del x
 
 e  = Echo_Tools()
-echoDict = e.echo_Dict
+echoDict = e.echo_Dict #echoDict is a method.  echoDct is a dictionary
 ed = e.eeDict          # A tool to list the methods set in the methDct to echo themselves at runtime.
 es = e.esDict
 em = e.eeMeth
