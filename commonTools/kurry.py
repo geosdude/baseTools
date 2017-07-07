@@ -16,9 +16,8 @@ class Kurry:
         self.fn = fn
         self.pending = args[:]
         self.kwargs = kwargs.copy()
-        #print 'self.fn = ', self.fn
-        #print 'self.pending = ', self.pending
-        #print 'self.kwargs = ', self.kwargs
+        print 'self.fn = ' + str(self.fn) + '\nself.pending = ' + str(self.pending) + '\nself.kwargs = ' + str(self.kwargs)
+        print M(Sk())
 
     def __call__(self, *args, **kwargs):  # Called when the instance is called as a function.
         if kwargs and self.kwargs:
@@ -29,7 +28,7 @@ class Kurry:
 #          print 'kw', kw, 'self.fn', self.fn, 'self.pending + args', self.pending + args
         return self.fn(*(self.pending + args), **kw)
 
-__builtins__['Kurry'] = Kurry
+#__builtins__['Kurry'] = Kurry
 
 # """
 # In functional programming, currying is a way to bind arguments with a function and wait for the

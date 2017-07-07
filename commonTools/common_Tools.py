@@ -120,6 +120,7 @@ class Common_Tools(Common_Vars, _Getch, _Pause):
         This method assembles a function call with it's arguments as a string, then
         executes it.
         """
+        # This is also gui related.  I will drop it once Im sure it has no functionality in basetools
         #! Set this up where farg and *args are for this method.  Use **kwargs for the
         #! called method.
         print ('farg ' + str(farg) + ' ' + str(type(farg))) + '\n' + \
@@ -145,49 +146,50 @@ class Common_Tools(Common_Vars, _Getch, _Pause):
         print 'com.fn', type(com.fn)
         print com.fn
 
-    def callHandler(self, function, **kwargs):
-      """  """
-      methodName = Mn(Sk())
-      try:
-        echo    = methDct[methodName][0]
-        verbose = methDct[methodName][1]
-        message = methDct[methodName][2]
-        option  = methDct[methodName][3]
-        kw      = methDct[methodName][4]
-      except StandardError:
-        isEchoKey(methodName)
-        echo    = methDct[methodName][0]
-        verbose = methDct[methodName][1]
-        message = methDct[methodName][2]
-        option  = methDct[methodName][3]
-        kw      = methDct[methodName][4]
-      if kwargs:
-        kw.update(kwargs)
-        methDct[methodName][4] = kw
-      if echo:
-        M(Sk(), offset=20)
-      if kw.has_key('cmdLst'):
-        for command in kw['cmdLst']:
-          exec(command)
 
-      # If the function is an event instance, redirect to the event handler.
-      if isinstance(function, InstanceType):
-        event = function
-        function = 'self.handleEvent(event)'
-      # Strip out 'self.' and '() from the passed in function string.
-      self.function = function[5:(len(function) - 2)]
-      try:
-          exec(function)
-          self.err_exception = 0
-      except StandardError:
-          error = 'Error in ' + str(function)
-          print error
-          import traceback
-          print traceback.format_exc()
-          sys.exc_clear()
-          self.err_exception = 1
-
-      return self.err_exception
+    #def callHandler(self, function, **kwargs):
+    #  """  """
+    #  methodName = Mn(Sk())
+    #  try:
+    #    echo    = methDct[methodName][0]
+    #    verbose = methDct[methodName][1]
+    #    message = methDct[methodName][2]
+    #    option  = methDct[methodName][3]
+    #    kw      = methDct[methodName][4]
+    #  except StandardError:
+    #    isEchoKey(methodName)
+    #    echo    = methDct[methodName][0]
+    #    verbose = methDct[methodName][1]
+    #    message = methDct[methodName][2]
+    #    option  = methDct[methodName][3]
+    #    kw      = methDct[methodName][4]
+    #  if kwargs:
+    #    kw.update(kwargs)
+    #    methDct[methodName][4] = kw
+    #  if echo:
+    #    M(Sk(), offset=20)
+    #  if kw.has_key('cmdLst'):
+    #    for command in kw['cmdLst']:
+    #      exec(command)
+    #
+    #  # If the function is an event instance, redirect to the event handler.
+    #  if isinstance(function, InstanceType):
+    #    event = function
+    #    function = 'self.handleEvent(event)'
+    #  # Strip out 'self.' and '() from the passed in function string.
+    #  self.function = function[5:(len(function) - 2)]
+    #  try:
+    #      exec(function)
+    #      self.err_exception = 0
+    #  except StandardError:
+    #      error = 'Error in ' + str(function)
+    #      print error
+    #      import traceback
+    #      print traceback.format_exc()
+    #      sys.exc_clear()
+    #      self.err_exception = 1
+    #
+    #  return self.err_exception
 
     def increment(self, cntVar='', cnt=None):
       if isinstance(cnt, NoneType):
@@ -204,27 +206,28 @@ class Common_Tools(Common_Vars, _Getch, _Pause):
         command = "self.s('" + cntVar + "', " + str(cnt) + ")"
       #print command
       exec(command)
-
-    def clearProcLst(self):
-      #self.writeLine('Clearing ', self.procLstFile, '...')
-      ##self.blankOutFile(self.procLstFile)
-      #fileobject = self.fileOpen(self.procLstFile, 'w')
-      #fileobject.write(' ')
-      #fileobject.close()
-      #self.procLst = []
-      self.set('procLst', [])
-
-    def printProcList(self):
-      #self.writeLine('procLst has ', str(len(self.procLst)), ' items.')
-      for item in self.procLst:
-        self.writeLine(item)
-      #self.writeLine('procLst has ', str(len(self.procLst)), ' items.')
-      self.blankLine()
-
-    def setProcList(self, inLst):
-      self.procLst = inLst
-      self.procLst.sort()
-      # neet to write out values to self.procLstFile
+#
+#    This is gui related.  Base_Tools class has no gui
+#    def clearProcLst(self):
+#      #self.writeLine('Clearing ', self.procLstFile, '...')
+#      ##self.blankOutFile(self.procLstFile)
+#      #fileobject = self.fileOpen(self.procLstFile, 'w')
+#      #fileobject.write(' ')
+#      #fileobject.close()
+#      #self.procLst = []
+#      self.set('procLst', [])
+#
+#    def printProcList(self):
+#      #self.writeLine('procLst has ', str(len(self.procLst)), ' items.')
+#      for item in self.procLst:
+#        self.writeLine(item)
+#      #self.writeLine('procLst has ', str(len(self.procLst)), ' items.')
+#      self.blankLine()
+#
+#    def setProcList(self, inLst):
+#      self.procLst = inLst
+#      self.procLst.sort()
+#      # neet to write out values to self.procLstFile
 
     def disabled(self):
       self.blankLine()

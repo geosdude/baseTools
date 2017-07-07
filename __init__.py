@@ -79,7 +79,6 @@ impLst = ["import os",
           "import cStringIO",
           "from baseTools.commonTools.kurry import Kurry",
           "from baseTools.commonTools.common_Tools import Common_Tools",
-          "from baseTools.threadTools.thread_Tools import ThreadedClient",
           ]
 
 for command in impLst:
@@ -1956,6 +1955,7 @@ __builtins__['ET'] = Env_Tools()
 __builtins__['TC'] = ThreadedClient()
 __builtins__['P'] = BT.Pause()
 __builtins__['G'] = BT.Getch()
+__builtins__['Kurry'] = Kurry
 #__builtins__['HM'] = BT.HookManager()
 
 #perform an experimental instantiation of the class
