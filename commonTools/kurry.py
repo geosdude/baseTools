@@ -7,26 +7,75 @@
 # in the 'Python Cookbook' http://aspn.activestate.com/ASPN/Python/Cookbook/
 #----------------------------------------------------
 
+#! need to insert this stack trace code.
+#! If these lines are present at the top of a function, metadata
+#  on the function gets populated in the method dictionary.
+
+
 print '  |' + __name__ + '| ---'
 
 class Kurry:
     """This class is a base class and only needs __builtin__"""
     def __init__(self, fn, *args, **kwargs):
+      methodName = 'Kurry.__init__'
+      try:
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      except StandardError:
+        isEchoKey(methodName)
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      if kwargs:
+        kw.update(kwargs)
+        methDct[methodName][4] = kw
+      if echo:
+        M(Sk(), offset=20)
+      if kw.has_key('cmdLst'):
+        for command in kw['cmdLst']:
+          exec(command)
 
-        self.fn = fn
-        self.pending = args[:]
-        self.kwargs = kwargs.copy()
-        print 'self.fn = ' + str(self.fn) + '\nself.pending = ' + str(self.pending) + '\nself.kwargs = ' + str(self.kwargs)
-        print M(Sk())
+      self.fn = fn
+      self.pending = args[:]
+      self.kwargs = kwargs.copy()
+      #print 'self.fn = ' + str(self.fn) + '\nself.pending = ' + str(self.pending) + '\nself.kwargs = ' + str(self.kwargs), M(Sk())
 
     def __call__(self, *args, **kwargs):  # Called when the instance is called as a function.
-        if kwargs and self.kwargs:
-          kw = self.kwargs.copy()
-          kw.update(kwargs)
-        else:
-          kw = kwargs or self.kwargs
-#          print 'kw', kw, 'self.fn', self.fn, 'self.pending + args', self.pending + args
-        return self.fn(*(self.pending + args), **kw)
+      methodName = 'Kurry.__call__'
+      try:
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      except StandardError:
+        isEchoKey(methodName)
+        echo    = methDct[methodName][0]
+        verbose = methDct[methodName][1]
+        message = methDct[methodName][2]
+        option  = methDct[methodName][3]
+        kw      = methDct[methodName][4]
+      if kwargs:
+        kw.update(kwargs)
+        methDct[methodName][4] = kw
+      if echo:
+        M(Sk(), offset=20)
+      if kw.has_key('cmdLst'):
+        for command in kw['cmdLst']:
+          exec(command)
+
+      if kwargs and self.kwargs:
+        kw = self.kwargs.copy()
+        kw.update(kwargs)
+      else:
+        kw = kwargs or self.kwargs
+#        print 'kw', kw, 'self.fn', self.fn, 'self.pending + args', self.pending + args
+      return self.fn(*(self.pending + args), **kw)
 
 #__builtins__['Kurry'] = Kurry
 
